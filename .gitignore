@@ -1,0 +1,1 @@
+"*.csv\n*.zip\n*.env\n*.db\n__pycache__/\n.ipynb_checkpoints/\n.DS_Store\n.env\n*.log"  

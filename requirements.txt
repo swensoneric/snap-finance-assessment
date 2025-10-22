@@ -1,0 +1,1 @@
+"pandas\nsqlalchemy\npsycopg2-binary\nduckdb\njupyter\nmatplotlib\nseaborn"  
