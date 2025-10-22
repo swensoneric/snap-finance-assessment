@@ -9,6 +9,8 @@ from sqlalchemy import create_engine, types
 # -----------------------------
 # 1. Database Configuration
 # -----------------------------
+load_dotenv()
+
 DB_USER = os.getenv("POSTGRES_USER", "postgres")
 DB_PASSWORD = os.getenv("POSTGRES_PASSWORD", "chewy")
 DB_HOST = os.getenv("POSTGRES_HOST", "localhost")
@@ -47,20 +49,21 @@ def map_dtypes(df):
     return dtype_mapping
 
 # -----------------------------
-# 5. Ingest CSV files
+# 5. Ingest CSV files to PostgreSQL
 # -----------------------------
 for table_name, file_path in FILES.items():
-    print(f"Ingesting '{table_name}' from '{file_path}'...")
-    df = pd.read_csv(file_path)
+    print(f"\n📥 Ingesting '{table_name}' from '{file_path}'...")
     
-    # Optional: parse dates automatically
+    # Load CSV and try to parse date columns
+    df = pd.read_csv(file_path)
     for col in df.columns:
         if "date" in col.lower():
             df[col] = pd.to_datetime(df[col], errors="coerce")
     
-    # Upload with dtype mapping
+    # Upload to database with datatype mapping
     df.to_sql(table_name, engine, if_exists="replace", index=False, dtype=map_dtypes(df))
-    print(f"✅ '{table_name}' ingested successfully ({df.shape[0]} rows).")
+    
+    print(f"✅ '{table_name}' uploaded successfully ({df.shape[0]} rows).")
 
 # -----------------------------
 # 6. Preview uploaded tables
