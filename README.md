@@ -11,8 +11,3 @@ Please click the following link to access the presentation: https://public.table
 2. Loading cleaned data into PostgreSQL for structured analysis (oops, Tableau public doesn't allow a postgreSQL connection)
 3. SQL-based performance metrics and segmentation
 4. Tableau dashboard summarizing key insights (via google sheets, lol)
-
-To replicate this project:
-- Clone the repo
-- Install dependencies from `requirements.txt`
-- Replace `sample_data/snap_sample.csv` with your own dataset
