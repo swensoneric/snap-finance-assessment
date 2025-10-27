@@ -8,9 +8,9 @@ Please click the following link to access the presentation: https://public.table
 
 **Key Steps:**
 1. Data cleaning and validation in Python
-2. Loading cleaned data into PostgreSQL for structured analysis
+2. Loading cleaned data into PostgreSQL for structured analysis (oops, Tableau public doesn't allow a postgreSQL connection)
 3. SQL-based performance metrics and segmentation
-4. Tableau dashboard summarizing key insights
+4. Tableau dashboard summarizing key insights (via google sheets, lol)
 
 To replicate this project:
 - Clone the repo
