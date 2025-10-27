@@ -4,6 +4,8 @@ This project analyzes a portfolio of lease-to-own borrowers to evaluate performa
 
 **Tools used:** Python (pandas, duckdb, SQLAlchemy), PostgreSQL, Tableau
 
+Please click the following link to access the presentation: https://public.tableau.com/app/profile/eric.swenson6007/viz/SwensonSnapAssessment/OpeningSlide
+
 **Key Steps:**
 1. Data cleaning and validation in Python
 2. Loading cleaned data into PostgreSQL for structured analysis
