@@ -1,4 +1,4 @@
-# Snap Finance Technical Assessment – Lead Analyst
+# lease to own portfolio analysis 
 
 This project analyzes a portfolio of lease-to-own borrowers to evaluate performance and conversion metrics.
 
